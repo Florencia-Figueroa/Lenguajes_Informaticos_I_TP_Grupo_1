@@ -1,0 +1,41 @@
+/*ACÁ ARMO MI PALETA */
+:root{
+    --color-primario: #f3c138;
+    --color-acento: #8b1d0c;  /*fondo nav*/
+    --color-secundario:#81c5f0;
+    --color-fondo:#e6d7d7; 
+    --color-texto:#1a1a1a;
+    --color-texto-claro:#e6d7d7;
+}
+
+/*RESET BÁSICO*/
+/*ESTILOS GLOBALES*/
+/*TIPOGRAFÍA*/
+
+/*HEADER*/
+header{
+    background-color: var(--color-acento);
+    color: var(--color-texto-claro);
+    padding: 1rem;
+}
+nav{
+    margin-top: 0.5rem;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+nav a{
+    color: var(--color-primario);
+    text-decoration:dotted; 
+    font-weight: 600;
+}
+nav a:hover{
+    color: var(--color-fondo);
+    text-decoration: underline;
+}
+
+/*MAIN Y SECCIONES*/
+/*IMAGENES TAMAÑO*/
+/*FOOTER*/ 

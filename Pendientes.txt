@@ -1,0 +1,8 @@
+Tareas pendientes: 
+- Dividir css
+- Boton para subir
+- Nav estatico
+- Iconos de redes arriba 
+- Color enlaces
+- Varias imagenes en lugar (para pasar, galeria)
+- Video turistico
