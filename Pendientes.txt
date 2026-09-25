@@ -1,8 +1,8 @@
 Tareas pendientes: 
-- Dividir css
+- Dividir css: header flor, main lore, footer abel
 - Boton para subir
 - Nav estatico
 - Iconos de redes arriba 
 - Color enlaces
 - Varias imagenes en lugar (para pasar, galeria)
-- Video turistico
+- Video turistico 

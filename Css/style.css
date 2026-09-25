@@ -6,9 +6,14 @@
     --color-fondo:#e6d7d7; 
     --color-texto:#1a1a1a;
     --color-texto-claro:#e6d7d7;
+    --fuente-principal: "Montserrat";   
 }
 
 /*RESET BÁSICO*/
+*{
+    font-family: var(--fuente-principal);
+}
+
 /*ESTILOS GLOBALES*/
 /*TIPOGRAFÍA*/
 
