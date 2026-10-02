@@ -1,12 +1,10 @@
 /*Variables globales*/
 :root{
     --color-fondo: #F5F0EB;            
-    --color-principal: #F09825;        
-    --color-secundario: #5C180D;      
+    --color-principal: #F2A94A;        
+    --color-secundario: #813C32;      
     --color-detalle: #718896;
-
     --color-texto-principal: #2D2B2A;  
-    --color-texto-secundario: #883225;
 
     --fuente-texto: "Montserrat";
 }
@@ -34,9 +32,16 @@ main {
     padding: 2rem 1rem;
 }
 /*Header*/
+header{
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
 
 /*Navegacion*/
 
 /*Main*/
 
 /*Footer*/
+footer{
+    background-color: var(--color-principal);
+}
