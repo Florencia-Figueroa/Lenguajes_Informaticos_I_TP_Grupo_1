@@ -1,46 +1,42 @@
-/*ACÁ ARMO MI PALETA */
+/*Variables globales*/
 :root{
-    --color-primario: #f3c138;
-    --color-acento: #8b1d0c;  /*fondo nav*/
-    --color-secundario:#81c5f0;
-    --color-fondo:#e6d7d7; 
-    --color-texto:#1a1a1a;
-    --color-texto-claro:#e6d7d7;
-    --fuente-principal: "Montserrat";   
+    --color-fondo: #F5F0EB;            
+    --color-principal: #F09825;        
+    --color-secundario: #5C180D;      
+    --color-detalle: #718896;
+
+    --color-texto-principal: #2D2B2A;  
+    --color-texto-secundario: #883225;
+
+    --fuente-texto: "Montserrat";
 }
 
-/*RESET BÁSICO*/
+
+/*Reset basico*/
 *{
-    font-family: var(--fuente-principal);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-/*ESTILOS GLOBALES*/
-/*TIPOGRAFÍA*/
+body{
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
 
-/*HEADER*/
-header{
-    background-color: var(--color-acento);
-    color: var(--color-texto-claro);
-    padding: 1rem;
-}
-nav{
-    margin-top: 0.5rem;
-}
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-nav a{
-    color: var(--color-primario);
-    text-decoration:dotted; 
-    font-weight: 600;
-}
-nav a:hover{
-    color: var(--color-fondo);
-    text-decoration: underline;
+    font-family: var(--fuente-texto);
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-/*MAIN Y SECCIONES*/
-/*IMAGENES TAMAÑO*/
-/*FOOTER*/ 
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+/*Header*/
+
+/*Navegacion*/
+
+/*Main*/
+
+/*Footer*/
