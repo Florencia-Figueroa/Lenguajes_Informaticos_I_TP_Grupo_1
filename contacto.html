@@ -18,65 +18,111 @@
 <body>
 
 
-<header>
-    <h1>Oficina de Turismo Antarion </h1>
-    <p>Información de contacto</p>
-    <nav>
-            <ul>
+    <header>    
+    <nav class="menu">
+        <div class="logo">
+            <h1>Antarion</h1>
+            <p>El asentamiento industrial de alta montaña donde la fuerza de la tierra se conecta con la inmensidad del cosmos.</p>
+        </div>
+            <ul class="navegacion">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="ciudad.html">Conocé nuestra ciudad</a></li>
                 <li><a href="lugares.html">Qué Visitar</a></li>
                 <li><a href="contacto.html">Atención al Visitante</a></li>
             </ul>
-     </nav>
-</header>
+    </nav>
+    </header>
 
 <main>
-    <section>
-        <h2>Contacto</h2>
+        <!-- Tarjeta Unificada en 2 Columnas con Mapa e Íconos -->
+        <div class="contacto-card-unificada">
+            
+            <!-- Columna Izquierda: Formulario de Contacto -->
+            <section class="formulario-contacto">
+                <h2>Formulario de contacto</h2>
 
-        <p>
-            <strong>Dirección:</strong>
-            calle Los Mineros 1638, Ciudad Mina de Antares, Buenos Aires
-        </p>
+                <form action="mailto:turismo@antarion.com" method="post" enctype="text/plain">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre..." required>
+                    </div>
 
-        <p>
-            <strong>Teléfono:</strong>
-            <a href="tel:+541146789123">
-                +54 11 4678-9123
-            </a>
-        </p>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
 
-        <p>
-            <strong>Email:</strong>
-            <a href="mailto:turismo@antarion.com">
-                turismo@antarion.com
-            </a>
-        </p>
+                    <div>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
 
-        <h3>Redes sociales</h3>
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </section>
 
-        <p>
-            <strong>Instagram:</strong>
-            <a href="https://www.instagram.com/turismo antarion" target="_blank">
-                @turismoantarion
-            </a>
-        </p>
+            <!-- Columna Derecha: Datos de Contacto y Mapa -->
+            <section class="contacto">
+                <h2>Información de Contacto</h2>
 
-        <p>
-            <strong>Facebook:</strong>
-            <a href="https://www.facebook.com/turismo antarion" target="_blank">
-                Turismo Antarion
-            </a>
-        </p>
+                <ul class="contacto-lista">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong>Dirección:</strong>
+                            <span>calle Los Mineros 1638, Ciudad Mina de Antares, Buenos Aires</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong>Teléfono:</strong>
+                            <a href="tel:+541146789123">+54 11 4678-9123</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong>Email:</strong>
+                            <a href="mailto:turismo@antarion.com">turismo@antarion.com</a>
+                        </div>
+                    </li>
+                </ul>
 
-    </section>
-</main>
+                <!-- Contenedor del Mapa Embebido -->
+                <div class="mapa-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367080643!2d-58.5323985!3d-34.603722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb63d3090c2a7%3A0xf67f40772f913d88!2sBuenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+                        width="100%" 
+                        height="180" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
 
-    <footer>
-        <hr>
-        <p><small>Ciudad de Antarion - Sitio Oficial de Turismo</small></p> 
-    </footer>
+                <h3>Redes sociales</h3>
+                <div class="redes-sociales">
+                    <a href="https://www.instagram.com/turismoantarion" target="_blank" class="red-item">
+                        <i class="fa-brands fa-instagram"></i> @turismoantarion
+                    </a>
+                    <a href="https://www.facebook.com/turismoantarion" target="_blank" class="red-item">
+                        <i class="fa-brands fa-facebook-f"></i> Turismo Antarion
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+<footer class="sitio-footer">
+    <div class="footer-content">
+        <p class="footer-ciudad">Ciudad de Antarion</p>
+        <p class="footer-oficial">Sitio Oficial de Turismo</p>
+    </div>
+    <div class="footer-boton">
+        <p><small>&copy; 2026 Ciudad de Antarion. Todos los derechos reservados.</small></p>
+    </div>
+</footer>
 
 
 </body>

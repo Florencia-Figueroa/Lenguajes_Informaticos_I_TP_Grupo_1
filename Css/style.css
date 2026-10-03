@@ -35,13 +35,466 @@ main {
 header{
     background-color: var(--color-secundario);
     color: var(--color-fondo);
+    position: sticky;
+    top: 0;
 }
 
 /*Navegacion*/
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.logo{
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    grid-template-areas:
+        "emblem title"
+        "emblem description";
+    align-items: center;
+    column-gap: 0.85rem;
+    max-width: 34rem;
+}
+
+.logo::before{
+    content: "✦";
+    grid-area: emblem;
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    color: var(--color-principal);
+    font-size: 1.6rem;
+    line-height: 1;
+    box-shadow: inset 0 0 0 4px var(--color-secundario);
+}
+
+.logo h1{
+    grid-area: title;
+    align-self: end;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    padding-left: 1rem;
+}
+
+.logo p{
+    grid-area: description;
+    align-self: start;
+    max-width: 28rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--color-fondo);
+    padding-left: 1rem;
+}
+
+.navegacion{
+    list-style: none;
+    display: flex;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+
+.navegacion li{
+    font-size: 1.2rem;
+}
+
+.navegacion :hover{
+    color: var(--color-principal);
+
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: var(--color-fondo);
+    font-weight: 400;
+    border-bottom: 2px solid var(--color-principal);
+}
 
 /*Main*/
 
+/* ESTILOS GENERALES Y SECCIONES EN TARJETAS */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+main h2 {
+    color: var(--color-secundario);
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid var(--color-principal);
+    padding-bottom: 0.4rem;
+}
+
+/*----------------------------------------------------FALTA MAIN DE LUGARES, INDEX----------------------------------------------------------------------*/
+
+/*CIUDAD*/
+/* 1. Historia e Identidad (Tarjeta Destacada) */
+#historia {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 6px solid var(--color-secundario);
+    box-shadow: 0 4px 15px var(--color-detalle);
+}
+
+#historia p {
+    margin-bottom: 1rem;
+}
+
+#historia p:last-child {
+    margin-bottom: 0;
+}
+
+/* 2 y 3. Grillas de Tarjetas (Características y Composición Social) */
+#caracteristicas, 
+#poblacion-y-barrios {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor en cuadrícula para los artículos */
+#caracteristicas,
+#poblacion-y-barrios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Forzar a que el título H2 ocupe todo el ancho en la grilla */
+#caracteristicas h2,
+#poblacion-y-barrios h2 {
+    grid-column: 1 / -1;
+}
+
+/* Estilos de las Tarjetas (Articles) */
+#caracteristicas article,
+#poblacion-y-barrios article {
+    background-color: var(--color-fondo);
+    padding: 1.5rem;
+    border-radius: 14px;
+    border: 1px solid var(--color-detalle);
+    box-shadow: 0 4px 12px var(--color-detalle);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#caracteristicas article:hover,
+#poblacion-y-barrios article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px var(--color-detalle);
+}
+
+#poblacion-y-barrios article {
+    border-top: 4px solid var(--color-principal);
+}
+
+#caracteristicas article h3,
+#poblacion-y-barrios article h3 {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Ajuste de Imagen en la Tarjeta */
+#caracteristicas article img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* 4. Datos Clave (Lista de Descripción) */
+#datos-clave {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px var(--color-detalle);
+}
+
+#datos-clave dl {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    row-gap: 1.2rem;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+#datos-clave dt {
+    font-weight: 700;
+    color: var(--color-secundario);
+    border-right: 2px solid var(--color-principal);
+    padding-right: 0.8rem;
+}
+
+#datos-clave dd {
+    margin: 0;
+}
+
+/* 5. Costumbres y Tradiciones */
+#costumbres {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px var(--color-detalle);
+}
+
+#costumbres ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+#costumbres li {
+    position: relative;
+    padding-left: 2rem;
+    line-height: 1.6;
+}
+
+#costumbres li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-principal);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+
+
+/* SECCIÓN DE CONTACTO */
+/* Contenedor principal unificado (2 Columnas) */
+.contacto-card-unificada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 980px;
+    margin: 3rem auto;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px var(--color-secundario);
+}
+
+/* Encabezados de ambas columnas */
+.formulario-contacto h2,
+.contacto h2 {
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* 1. Columna Izquierda: Formulario */
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.formulario-contacto form div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.formulario-contacto label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-texto-principal);
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1.5px solid #E0D7CE;
+    border-radius: 10px;
+    background-color: #FCFAF8;
+    color: var(--color-texto-principal);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+    color: #A09890;
+}
+
+/* Enfocado de inputs con resplandor en color secundario */
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color-secundario);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px var(--color-secundario);
+}
+
+.formulario-contacto textarea {
+    min-height: 7.5rem;
+    resize: vertical;
+}
+
+/* Botón enviar ancho completo */
+.btn-enviar {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(129, 60, 50, 0.25);
+}
+
+/* 2. Columna Derecha: Información y Mapa*/
+.contacto-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.contacto-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+}
+
+.contacto-lista i {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.contacto-lista div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4;
+}
+
+.contacto-lista strong {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #718896;
+}
+
+.contacto-lista a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contacto-lista a:hover {
+    color: var(--color-principal);
+    text-decoration: underline;
+}
+
+/* Mapa */
+.mapa-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--color-secundario);
+    margin-bottom: 1.5rem;
+}
+
+/* Redes Sociales */
+.contacto h3 {
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.red-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.9rem;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--color-secundario);
+    transition: all 0.2s ease;
+}
+
+.red-item:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-fondo);
+}
+
 /*Footer*/
-footer{
+.sitio-footer {
     background-color: var(--color-principal);
+    color: var(--color-fondo);
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid ;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+}
+
+.footer-ciudad {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+}
+
+.footer-oficial {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin: 0;
+}
+
+.footer-boton {
+    margin: 0 auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid;
 }
