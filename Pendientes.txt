@@ -1,8 +1,25 @@
 Tareas pendientes: 
-- Dividir css: header flor, main lore, footer abel
+Abel: 
+    arraglar footerl 
+    color distinto del header color principal, color texto principal 
+    Aplicar color de fondo diferenciado al header y al footer.
+    Aplicar padding y margin a los elementos principales: header, main, footer, secciones (<section>) y párrafos. (ver)
+
+Lore
+    main en otras paginas 
+    colores
+    nav hamburguesa
+
+Flor: 
+    detalles
+    Aplicar estilos distintos a los headings: al menos tamaño y color diferenciado entre h1, h2 y h3.
+    ordenar un poco mas el css
+
+
+Pendientes: 
 - Boton para subir
-- Nav estatico
 - Iconos de redes arriba 
 - Color enlaces
 - Varias imagenes en lugar (para pasar, galeria)
 - Video turistico 
+- que sea para movil 
