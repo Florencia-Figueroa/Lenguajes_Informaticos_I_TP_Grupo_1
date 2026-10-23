@@ -1,4 +1,7 @@
-/*Variables globales*/
+/* 1. Variables de color y tipografia reutilizadas en todo el sitio */
+
+
+
 :root{
     --color-fondo: #F5F0EB;            
     --color-principal: #F2A94A;        
@@ -10,7 +13,10 @@
 }
 
 
-/*Reset basico*/
+/* 2. Reset y estilos base: normaliza elementos y define el aspecto general */
+
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -30,8 +36,14 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1rem;
+
+
+
 }
-/*Header*/
+/* 3. Encabezado: fondo y posicion fija al desplazarse */
+
+
+
 header{
     background-color: var(--color-secundario);
     color: var(--color-fondo);
@@ -39,7 +51,10 @@ header{
     top: 0;
 }
 
-/*Navegacion*/
+/*  Navegacion: distribuye la marca y los enlaces del encabezado */
+
+
+
 .menu{
     display: flex;
     justify-content: space-between;
@@ -57,10 +72,14 @@ header{
     align-items: center;
     column-gap: 0.85rem;
     max-width: 34rem;
+    min-width: 0;
+    flex: 1 1 auto;
 }
 
-.logo::before{
-    content: "✦";
+/* Emblema decorativo junto al nombre de la ciudad */
+
+
+.logo-emblem{
     grid-area: emblem;
     display: grid;
     place-items: center;
@@ -83,6 +102,9 @@ header{
     padding-left: 1rem;
 }
 
+/* Texto descriptivo que acompana la marca */
+
+
 .logo p{
     grid-area: description;
     align-self: start;
@@ -96,30 +118,33 @@ header{
 .navegacion{
     list-style: none;
     display: flex;
-    padding: 2rem;
+    flex-direction: column;
+    padding: 0;
     gap: 1.5rem;
+    margin-bottom: 0;
 }
+
+/* Tamano, color y estados visuales de los enlaces de navegacion */
 
 
 .navegacion li{
     font-size: 1.2rem;
 }
 
-.navegacion :hover{
+.menu .navegacion .nav-link:hover{
     color: var(--color-principal);
-
 }
 
-.navegacion a{
+.menu .navegacion .nav-link{
     text-decoration: none;
     color: var(--color-fondo);
     font-weight: 400;
     border-bottom: 2px solid var(--color-principal);
 }
 
-/*Main*/
 
-/* ESTILOS GENERALES Y SECCIONES EN TARJETAS */
+
+/* 4. Contenido principal: ancho, espaciado y estilo comun de titulos */
 
 main {
     display: flex;
@@ -135,7 +160,7 @@ main h2 {
     padding-bottom: 0.4rem;
 }
 
-/*---------------------------------------------------- MAIN DE LUGARES -----------------------------------------------------*/
+/* 5. Pagina de lugares: tarjetas, imagenes y enlaces de los atractivos */
 
 main.pagina-lugares #lugares {
     display: grid;
@@ -203,11 +228,13 @@ main.pagina-lugares #lugares a:hover {
 }
 
 
-/*------------------------------------------------------------MAIN INDEX----------------------------------------------------------------------*/
+/* 6. Inicio: presentacion, caracteristicas, atractivos, eventos y novedades */
+
+
 
 main.pagina-inicio {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
     gap: 1.5rem;
     align-items: start;
 }
@@ -316,8 +343,7 @@ main.pagina-inicio #caracteristicas li::marker {
     color: var(--color-principal);
 }
 
-main.pagina-inicio #lugaresDestacados,
-main.pagina-inicio #eventos {
+main.pagina-inicio #lugaresDestacados {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
@@ -374,9 +400,9 @@ main.pagina-inicio #novedades article {
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
-    padding: 1.25rem;
-    background-color: rgba(245, 240, 235, 0.08);
-    border: 1px solid rgba(245, 240, 235, 0.25);
+    padding: 1rem;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-principal);
     border-radius: 10px;
     color: var(--color-fondo);
 }
@@ -384,6 +410,8 @@ main.pagina-inicio #novedades article {
 main.pagina-inicio #novedades h3 {
     margin-bottom: 0.5rem;
     color: var(--color-principal);
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 main.pagina-inicio #novedades a {
@@ -399,8 +427,10 @@ main.pagina-inicio #novedades a:hover {
 
 
 
-/*---------------------------------------------------------MAIN CIUDAD-----------------------------------------------*/
-/* 1. Historia e Identidad (Tarjeta Destacada) */
+/* 7. Pagina de ciudad: historia, clima, poblacion, datos y costumbres */
+/*  Historia e identidad: tarjeta de introduccion */
+
+
 #historia {
     background-color: var(--color-fondo);
     padding: 2rem;
@@ -416,14 +446,12 @@ main.pagina-inicio #novedades a:hover {
     margin-bottom: 0;
 }
 
-/* 2 y 3. Grillas de Tarjetas (Características y Composición Social) */
-#caracteristicas, 
-#poblacion-y-barrios {
-    display: flex;
-    flex-direction: column;
-}
+/*  Clima y poblacion: grillas de tarjetas */
 
-/* Contenedor en cuadrícula para los artículos */
+
+/* Columnas adaptables para las tarjetas de clima y poblacion */
+
+
 #caracteristicas,
 #poblacion-y-barrios {
     display: grid;
@@ -431,13 +459,17 @@ main.pagina-inicio #novedades a:hover {
     gap: 1.5rem;
 }
 
-/* Forzar a que el título H2 ocupe todo el ancho en la grilla */
+/* Titulos de seccion a lo ancho de la grilla */
+
 #caracteristicas h2,
 #poblacion-y-barrios h2 {
     grid-column: 1 / -1;
 }
 
-/* Estilos de las Tarjetas (Articles) */
+/* Apariencia y distribucion interior de las tarjetas */
+
+
+
 #caracteristicas article,
 #poblacion-y-barrios article {
     background-color: var(--color-fondo);
@@ -462,17 +494,21 @@ main.pagina-inicio #novedades a:hover {
     margin-bottom: 0.8rem;
 }
 
-/* Ajuste de Imagen en la Tarjeta */
+/* Imagenes del clima con dimensiones uniformes */
+
+
 #caracteristicas article img {
-    width: auto;
-    height: auto;
-    max-height: 180px;
+    width: 100%;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
     margin-top: 1rem;
 }
 
-/* 4. Datos Clave (Lista de Descripción) */
+/*  Datos clave: terminos y descripciones en dos columnas */
+
+
+
 #datos-clave {
     background-color: var(--color-fondo);
     padding: 2rem;
@@ -499,7 +535,9 @@ main.pagina-inicio #novedades a:hover {
     margin: 0;
 }
 
-/* 5. Costumbres y Tradiciones */
+/* Costumbres: lista personalizada */
+
+
 #costumbres {
     background-color: var(--color-fondo);
     padding: 2rem;
@@ -532,9 +570,11 @@ main.pagina-inicio #novedades a:hover {
 }
 
 
+/* 8. Pagina de contacto */
+/* Contenedor principal: formulario e informacion en dos columnas */
 
-/* --------------------------------------------SECCIÓN DE CONTACTO--------------------------------- */
-/* Contenedor principal unificado (2 Columnas) */
+
+
 .contacto-card-unificada {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -548,7 +588,9 @@ main.pagina-inicio #novedades a:hover {
     box-shadow: 0 10px 25px var(--color-secundario);
 }
 
-/* Encabezados de ambas columnas */
+/* Titulos del formulario y la informacion de contacto */
+
+
 .formulario-contacto h2,
 .contacto h2 {
     color: var(--color-secundario);
@@ -557,7 +599,9 @@ main.pagina-inicio #novedades a:hover {
     font-weight: 700;
 }
 
-/* 1. Columna Izquierda: Formulario */
+/*  Formulario: campos, etiquetas, foco y boton de envio */
+
+
 .formulario-contacto form {
     display: flex;
     flex-direction: column;
@@ -577,6 +621,7 @@ main.pagina-inicio #novedades a:hover {
 }
 
 .formulario-contacto input,
+.formulario-contacto select,
 .formulario-contacto textarea {
     width: 100%;
     padding: 0.8rem 1rem;
@@ -594,8 +639,10 @@ main.pagina-inicio #novedades a:hover {
     color: var(--color-placeholder);
 }
 
-/* Enfocado de inputs con resplandor en color secundario */
+/* Resalta el campo activo para facilitar el ingreso de datos */
+
 .formulario-contacto input:focus,
+.formulario-contacto select:focus,
 .formulario-contacto textarea:focus {
     outline: none;
     border-color: var(--color-secundario);
@@ -608,7 +655,10 @@ main.pagina-inicio #novedades a:hover {
     resize: vertical;
 }
 
-/* Botón enviar ancho completo */
+/* Boton de envio a ancho completo */
+
+
+
 .btn-enviar {
     width: 100%;
     padding: 0.9rem;
@@ -630,7 +680,9 @@ main.pagina-inicio #novedades a:hover {
     box-shadow: 0 5px 12px var(--color-secundario);
 }
 
-/* 2. Columna Derecha: Información y Mapa*/
+/*  Columna de informacion: datos de contacto, mapa y redes */
+
+
 .contacto-lista {
     list-style: none;
     padding: 0;
@@ -646,14 +698,6 @@ main.pagina-inicio #novedades a:hover {
     gap: 0.9rem;
 }
 
-.contacto-lista i {
-    color: var(--color-secundario);
-    font-size: 1.2rem;
-    margin-top: 0.2rem;
-    width: 20px;
-    text-align: center;
-}
-
 .contacto-lista div {
     display: flex;
     flex-direction: column;
@@ -664,7 +708,6 @@ main.pagina-inicio #novedades a:hover {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--color-texto-secundario);
 }
 
 .contacto-lista a {
@@ -678,7 +721,9 @@ main.pagina-inicio #novedades a:hover {
     text-decoration: underline;
 }
 
-/* Mapa */
+/* Mapa embebido adaptable al ancho de su contenedor */
+
+
 .mapa-container {
     border-radius: 12px;
     overflow: hidden;
@@ -693,7 +738,9 @@ main.pagina-inicio #novedades a:hover {
     border: 0;
 }
 
-/* Redes Sociales */
+/* Enlaces a redes sociales con estilo de boton */
+
+
 .contacto h3 {
     color: var(--color-secundario);
     font-size: 1.1rem;
@@ -726,7 +773,9 @@ main.pagina-inicio #novedades a:hover {
     color: var(--color-fondo);
 }
 
-/*--------------------------------------------------Footer-------------------------------------------------*/
+/* 9. Pie de pagina compartido por todas las paginas */
+
+
 .sitio-footer {
     background-color: var(--color-principal);
     color: var(--color-texto-principal);
@@ -737,4 +786,7 @@ main.pagina-inicio #novedades a:hover {
     font-size: 0.9rem;
 }
 
-
+/* Evita que las imagenes superen el ancho de su contenedor */
+img {
+    max-width: 100%;
+}
