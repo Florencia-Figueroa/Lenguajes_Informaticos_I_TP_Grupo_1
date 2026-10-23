@@ -1,7 +1,4 @@
-/* 1. Variables de color y tipografia reutilizadas en todo el sitio */
-
-
-
+/* ------------------------------- Variables: color y tipografia -------------------------------*/
 :root{
     --color-fondo: #F5F0EB;            
     --color-principal: #F2A94A;        
@@ -13,10 +10,8 @@
 }
 
 
-/* 2. Reset y estilos base: normaliza elementos y define el aspecto general */
 
-
-
+/* ----------------------------------- Reset y estilos base ------------------------------------*/
 *{
     box-sizing: border-box;
     margin: 0;
@@ -36,14 +31,11 @@ main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1rem;
-
-
-
 }
-/* 3. Encabezado: fondo y posicion fija al desplazarse */
 
 
 
+/* ------------------------------------------ Header -------------------------------------------*/
 header{
     background-color: var(--color-secundario);
     color: var(--color-fondo);
@@ -51,10 +43,9 @@ header{
     top: 0;
 }
 
-/*  Navegacion: distribuye la marca y los enlaces del encabezado */
 
 
-
+/* -------------------------------------- Logo y eslogan ---------------------------------------*/
 .menu{
     display: flex;
     justify-content: space-between;
@@ -75,9 +66,6 @@ header{
     min-width: 0;
     flex: 1 1 auto;
 }
-
-/* Emblema decorativo junto al nombre de la ciudad */
-
 
 .logo-emblem{
     grid-area: emblem;
@@ -102,9 +90,6 @@ header{
     padding-left: 1rem;
 }
 
-/* Texto descriptivo que acompana la marca */
-
-
 .logo p{
     grid-area: description;
     align-self: start;
@@ -115,6 +100,9 @@ header{
     padding-left: 1rem;
 }
 
+
+
+/* ------------------------------------ Barra de navegacion ------------------------------------*/
 .navegacion{
     list-style: none;
     display: flex;
@@ -123,9 +111,6 @@ header{
     gap: 1.5rem;
     margin-bottom: 0;
 }
-
-/* Tamano, color y estados visuales de los enlaces de navegacion */
-
 
 .navegacion li{
     font-size: 1.2rem;
@@ -144,8 +129,7 @@ header{
 
 
 
-/* 4. Contenido principal: ancho, espaciado y estilo comun de titulos */
-
+/* ------------------------------------------- Main --------------------------------------------*/
 main {
     display: flex;
     flex-direction: column;
@@ -160,7 +144,7 @@ main h2 {
     padding-bottom: 0.4rem;
 }
 
-/* 5. Pagina de lugares: tarjetas, imagenes y enlaces de los atractivos */
+/* --------------------------------------- Main lugares ----------------------------------------*/
 
 main.pagina-lugares #lugares {
     display: grid;
@@ -228,10 +212,8 @@ main.pagina-lugares #lugares a:hover {
 }
 
 
-/* 6. Inicio: presentacion, caracteristicas, atractivos, eventos y novedades */
 
-
-
+/* --------------------------------------- Main inicio -----------------------------------------*/
 main.pagina-inicio {
     display: grid;
     grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
@@ -425,12 +407,7 @@ main.pagina-inicio #novedades a:hover {
 
 
 
-
-
-/* 7. Pagina de ciudad: historia, clima, poblacion, datos y costumbres */
-/*  Historia e identidad: tarjeta de introduccion */
-
-
+/* --------------------------------------- Main ciudad -----------------------------------------*/
 #historia {
     background-color: var(--color-fondo);
     padding: 2rem;
@@ -446,12 +423,9 @@ main.pagina-inicio #novedades a:hover {
     margin-bottom: 0;
 }
 
-/*  Clima y poblacion: grillas de tarjetas */
 
 
-/* Columnas adaptables para las tarjetas de clima y poblacion */
-
-
+/* -------------------------------- Tarjetas clima y poblacion ---------------------------------*/
 #caracteristicas,
 #poblacion-y-barrios {
     display: grid;
@@ -459,16 +433,11 @@ main.pagina-inicio #novedades a:hover {
     gap: 1.5rem;
 }
 
-/* Titulos de seccion a lo ancho de la grilla */
 
 #caracteristicas h2,
 #poblacion-y-barrios h2 {
     grid-column: 1 / -1;
 }
-
-/* Apariencia y distribucion interior de las tarjetas */
-
-
 
 #caracteristicas article,
 #poblacion-y-barrios article {
@@ -482,7 +451,6 @@ main.pagina-inicio #novedades a:hover {
     justify-content: space-between;
 }
 
-
 #poblacion-y-barrios article {
     border-top: 4px solid var(--color-principal);
 }
@@ -494,9 +462,9 @@ main.pagina-inicio #novedades a:hover {
     margin-bottom: 0.8rem;
 }
 
-/* Imagenes del clima con dimensiones uniformes */
 
 
+/* ---------------------------- imagenes, datos claves y costumbres ----------------------------*/
 #caracteristicas article img {
     width: 100%;
     height: 180px;
@@ -504,10 +472,6 @@ main.pagina-inicio #novedades a:hover {
     border-radius: 8px;
     margin-top: 1rem;
 }
-
-/*  Datos clave: terminos y descripciones en dos columnas */
-
-
 
 #datos-clave {
     background-color: var(--color-fondo);
@@ -534,9 +498,6 @@ main.pagina-inicio #novedades a:hover {
 #datos-clave dd {
     margin: 0;
 }
-
-/* Costumbres: lista personalizada */
-
 
 #costumbres {
     background-color: var(--color-fondo);
@@ -569,12 +530,12 @@ main.pagina-inicio #novedades a:hover {
     font-weight: bold;
 }
 
+img {
+    max-width: 100%;
+}
 
-/* 8. Pagina de contacto */
-/* Contenedor principal: formulario e informacion en dos columnas */
 
-
-
+/* --------------------------------------- Main contacto ---------------------------------------*/
 .contacto-card-unificada {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -588,9 +549,6 @@ main.pagina-inicio #novedades a:hover {
     box-shadow: 0 10px 25px var(--color-secundario);
 }
 
-/* Titulos del formulario y la informacion de contacto */
-
-
 .formulario-contacto h2,
 .contacto h2 {
     color: var(--color-secundario);
@@ -598,9 +556,6 @@ main.pagina-inicio #novedades a:hover {
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
-
-/*  Formulario: campos, etiquetas, foco y boton de envio */
-
 
 .formulario-contacto form {
     display: flex;
@@ -639,8 +594,6 @@ main.pagina-inicio #novedades a:hover {
     color: var(--color-placeholder);
 }
 
-/* Resalta el campo activo para facilitar el ingreso de datos */
-
 .formulario-contacto input:focus,
 .formulario-contacto select:focus,
 .formulario-contacto textarea:focus {
@@ -654,10 +607,6 @@ main.pagina-inicio #novedades a:hover {
     min-height: 7.5rem;
     resize: vertical;
 }
-
-/* Boton de envio a ancho completo */
-
-
 
 .btn-enviar {
     width: 100%;
@@ -679,9 +628,6 @@ main.pagina-inicio #novedades a:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 12px var(--color-secundario);
 }
-
-/*  Columna de informacion: datos de contacto, mapa y redes */
-
 
 .contacto-lista {
     list-style: none;
@@ -721,9 +667,6 @@ main.pagina-inicio #novedades a:hover {
     text-decoration: underline;
 }
 
-/* Mapa embebido adaptable al ancho de su contenedor */
-
-
 .mapa-container {
     border-radius: 12px;
     overflow: hidden;
@@ -737,9 +680,6 @@ main.pagina-inicio #novedades a:hover {
     height: 180px;
     border: 0;
 }
-
-/* Enlaces a redes sociales con estilo de boton */
-
 
 .contacto h3 {
     color: var(--color-secundario);
@@ -773,10 +713,10 @@ main.pagina-inicio #novedades a:hover {
     color: var(--color-fondo);
 }
 
-/* 9. Pie de pagina compartido por todas las paginas */
 
 
-.sitio-footer {
+/* ------------------------------------------ Footer -------------------------------------------*/
+footer {
     background-color: var(--color-principal);
     color: var(--color-texto-principal);
     padding: 0.7rem 1rem;
@@ -786,7 +726,95 @@ main.pagina-inicio #novedades a:hover {
     font-size: 0.9rem;
 }
 
-/* Evita que las imagenes superen el ancho de su contenedor */
-img {
+
+
+/* ==========================================================================
+   INTEGRANTE 4: Posicionamiento y Personalizaciones Bootstrap
+   ========================================================================== */
+
+/* 1. Header con position: sticky */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* 2. Anular el flexbox de la Etapa 2 con alta especificidad para expandir a 100% */
+main.pagina-inicio section#presentacion,
+main section#presentacion,
+section#presentacion {
+    display: block; /* Fuerza a la tarjeta a usar bloque entero en vez de flexbox */
+}
+
+main.pagina-inicio section#presentacion .contenedor-hero-presentacion,
+main section#presentacion .contenedor-hero-presentacion {
+    position: relative;
+    width: 100%;
     max-width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+main.pagina-inicio section#presentacion .contenedor-hero-presentacion img,
+main section#presentacion .contenedor-hero-presentacion img {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+}
+
+main.pagina-inicio section#presentacion .texto-hero-superpuesto,
+main section#presentacion .texto-hero-superpuesto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(129, 60, 50, 0.9);
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-principal);
+    text-align: center;
+}
+
+main.pagina-inicio section#presentacion .texto-hero-superpuesto p {
+    color: var(--color-fondo);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+}
+
+/* 3. Personalización del Botón de Bootstrap */
+.btn-primary.boton-antarion,
+.boton-antarion {
+    background-color: var(--color-principal);
+    border-color: var(--color-principal);
+    color: var(--color-texto-principal);
+    font-weight: 700;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary.boton-antarion:hover,
+.boton-antarion:hover {
+    background-color: var(--color-fondo);
+}
+
+/* 4. Badge flotante sobre la imagen de características */
+main section#caracteristicas {
+    position: relative;
+}
+
+main section#caracteristicas .etiqueta-flotante {
+    position: absolute;
+    top: 125px;    /* Aumentado a 125px para que encaje perfecto dentro de la foto */
+    right: 42px;   
+    z-index: 10;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }

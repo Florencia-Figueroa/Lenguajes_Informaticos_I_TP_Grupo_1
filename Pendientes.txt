@@ -1,25 +1,25 @@
 Tareas pendientes: 
 Abel: 
-    arraglar footerl 
     color distinto del header color principal, color texto principal 
-    Aplicar color de fondo diferenciado al header y al footer.
-    Aplicar padding y margin a los elementos principales: header, main, footer, secciones (<section>) y párrafos. (ver)
+    TP parte 3: integrante 2 y 3: 
+        Grilla de Bootstrap en al menos una sección: container, row, col-* responsivos.
+        Flexbox en el CSS propio: cards o ítems de sección con display:flex.
+
 
 Lore
-    main en otras paginas 
-    colores
-    nav hamburguesa
+    TP parte 3: integrante 1: Navbar de Bootstrap: componente completo con hamburguesa, links y navbar-brand.
+
 
 Flor: 
-    detalles
-    Aplicar estilos distintos a los headings: al menos tamaño y color diferenciado entre h1, h2 y h3.
-    ordenar un poco mas el css
+    terminar de comentar css
+    TP parte 3: integrante 4: Posicionamiento y personalización Bootstrap: position en algún elemento + estilos propios sobre Bootstrap.
 
 
 Pendientes: 
 - Boton para subir
 - Iconos de redes arriba 
-- Color enlaces
 - Varias imagenes en lugar (para pasar, galeria)
 - Video turistico 
-- que sea para movil 
+- logo del titulo falta en contacto
+- responsivo detalle tarjeta en movil (consultar profe)
+- sacar clases de elementos principales 
