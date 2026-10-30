@@ -723,27 +723,39 @@ img {
 footer {
     background-color: var(--color-secundario);
     color: var(--color-fondo);
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     border-top: 5px solid var(--color-principal);
-    margin-top: 0; 
-    font-size: 0.9rem;
+    margin-top: 3rem; 
+    font-size: 0.85rem;
     box-sizing: border-box;
-    bottom: 0;
     width: 100%;
-
 }
 
-footer div{
+footer p {
+    margin-bottom: 0.3rem;
+}
+
+
+footer div {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 0.5rem;
+    align-items: center;
+    gap: 12px;
+    margin: 0.4rem 0;
     width: 100%;
-    height: 50px;
+    height: auto; 
 }
 
-a{
+/* Tamaño controlado para los iconos de redes sociales */
+footer div a img,
+footer div a i {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+
+a {
     transition: all 0.3s ease;
 }
 
