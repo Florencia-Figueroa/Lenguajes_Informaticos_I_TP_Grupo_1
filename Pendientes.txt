@@ -11,8 +11,6 @@ Lore
 
 
 Flor: 
-    terminar de comentar css
-    TP parte 3: integrante 4: Posicionamiento y personalización Bootstrap: position en algún elemento + estilos propios sobre Bootstrap.
 
 
 Pendientes: 
@@ -21,5 +19,3 @@ Pendientes:
 - Varias imagenes en lugar (para pasar, galeria)
 - Video turistico 
 - logo del titulo falta en contacto
-- responsivo detalle tarjeta en movil (consultar profe)
-- sacar clases de elementos principales 

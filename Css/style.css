@@ -144,6 +144,9 @@ main h2 {
     padding-bottom: 0.4rem;
 }
 
+
+
+
 /* --------------------------------------- Main lugares ----------------------------------------*/
 
 main.pagina-lugares #lugares {
@@ -535,6 +538,7 @@ img {
 }
 
 
+
 /* --------------------------------------- Main contacto ---------------------------------------*/
 .contacto-card-unificada {
     display: grid;
@@ -748,22 +752,20 @@ a:hover {
 }
 
 
-/* ==========================================================================
-   INTEGRANTE 4: Posicionamiento y Personalizaciones Bootstrap
-   ========================================================================== */
 
-/* 1. Header con position: sticky */
+/* ------------------------------- Bootstrap posicionamientos ---------------------------------*/
+/* Header con position sticky */
 header {
     position: sticky;
     top: 0;
     z-index: 1030;
 }
 
-/* 2. Anular el flexbox de la Etapa 2 con alta especificidad para expandir a 100% */
+/* Anula el flexbox por que sino queda espacio vacio en la tarjeta*/
 main.pagina-inicio section#presentacion,
 main section#presentacion,
 section#presentacion {
-    display: block; /* Fuerza a la tarjeta a usar bloque entero en vez de flexbox */
+    display: block; 
 }
 
 main.pagina-inicio section#presentacion .contenedor-hero-presentacion,
@@ -807,7 +809,10 @@ main.pagina-inicio section#presentacion .texto-hero-superpuesto p {
     font-size: 0.95rem;
 }
 
-/* 3. Personalización del Botón de Bootstrap */
+
+
+/* ------------------------------- Bootstrap Personalizacion ---------------------------------*/
+/* Boton pag inicio */
 .btn-primary.boton-antarion,
 .boton-antarion {
     background-color: var(--color-principal);
@@ -823,15 +828,31 @@ main.pagina-inicio section#presentacion .texto-hero-superpuesto p {
     background-color: var(--color-fondo);
 }
 
-/* 4. Badge flotante sobre la imagen de características */
+/* Badge flotante sobre la imagen de características */
 main section#caracteristicas {
     position: relative;
 }
 
 main section#caracteristicas .etiqueta-flotante {
     position: absolute;
-    top: 125px;    /* Aumentado a 125px para que encaje perfecto dentro de la foto */
+    top: 125px;   
     right: 42px;   
+    z-index: 10;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Badge flotante sobre la imagen de La Fundicion Vieja */
+#fundicion {
+    position: relative; 
+}
+
+#fundicion .etiqueta-flotante-fundicion {
+    position: absolute;
+    top: 65px;     
+    right: 30px;   
     z-index: 10;
     font-size: 0.85rem;
     padding: 0.4rem 0.8rem;
