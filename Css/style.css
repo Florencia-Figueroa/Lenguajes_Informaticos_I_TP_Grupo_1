@@ -5,6 +5,9 @@
     --color-secundario: #813C32;      
     --color-detalle: #718896;
     --color-texto-principal: #2D2B2A;  
+    --color-superficie-header: var(--color-secundario);
+    --color-texto-header: var(--color-fondo);
+    --color-placeholder: #80756D;
 
     --fuente-texto: "Montserrat";
 }
@@ -37,8 +40,8 @@ main {
 
 /* ------------------------------------------ Header -------------------------------------------*/
 header{
-    background-color: var(--color-secundario);
-    color: var(--color-fondo);
+    background-color: var(--color-superficie-header);
+    color: var(--color-texto-header);
     position: sticky;
     top: 0;
 }
@@ -96,7 +99,7 @@ header{
     max-width: 28rem;
     font-size: 0.82rem;
     line-height: 1.45;
-    color: var(--color-fondo);
+    color: var(--color-texto-header);
     padding-left: 1rem;
 }
 
@@ -122,7 +125,7 @@ header{
 
 .menu .navegacion .nav-link{
     text-decoration: none;
-    color: var(--color-fondo);
+    color: var(--color-texto-header);
     font-weight: 400;
     border-bottom: 2px solid var(--color-principal);
 }
@@ -721,8 +724,8 @@ img {
 
 /* ------------------------------------------ Footer -------------------------------------------*/
 footer {
-    background-color: var(--color-secundario);
-    color: var(--color-fondo);
+    background-color: var(--color-superficie-header);
+    color: var(--color-texto-header);
     padding: 0.5rem 1rem;
     text-align: center;
     border-top: 5px solid var(--color-principal);
@@ -870,4 +873,124 @@ main section#caracteristicas .etiqueta-flotante {
     padding: 0.4rem 0.8rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/*------------------------------ Boton de cambio de tema------------------- */
+
+.theme-switch {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.theme-switch__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.theme-switch__track {
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 50px;
+    border-radius: 999px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.theme-switch__track::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #9d5020, #facc15);
+    box-shadow: 0 2px 6px var(--color-detalle);
+    content: "";
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.theme-switch__sun,
+.theme-switch__moon {
+    position: absolute;
+    top: 13px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+}
+
+.theme-switch__sun {
+    left: 13px;
+    fill: #fff;
+}
+
+.theme-switch__moon {
+    right: 13px;
+    fill: #000;
+    opacity: 0.6;
+}
+
+.theme-switch__input:checked + .theme-switch__track {
+    background-color: #71717a;
+}
+
+.theme-switch__input:checked + .theme-switch__track::after {
+    transform: translateX(60px);
+    background: #18181b;
+}
+
+.theme-switch__input:checked + .theme-switch__track .theme-switch__sun {
+    opacity: 0.6;
+}
+
+.theme-switch__input:checked + .theme-switch__track .theme-switch__moon {
+    fill: #fff;
+    opacity: 0.8;
+}
+
+.theme-switch__input:focus-visible + .theme-switch__track {
+    outline: 3px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
+[data-theme="oscuro"] {
+    --color-fondo: #1D1B1A;
+    --color-principal: #F2A94A;
+    --color-secundario: #D88976;
+    --color-detalle: #A3928A;
+    --color-texto-principal: #EEE6DF;
+    --color-superficie-header: #302522;
+    --color-texto-header: #F5F0EB;
+    --color-placeholder: #B8AAA1;
+    color-scheme: dark;
+}
+
+[data-theme="oscuro"] main.pagina-inicio #novedades,
+[data-theme="oscuro"] main.pagina-inicio #novedades article,
+[data-theme="oscuro"] main section#presentacion .texto-hero-superpuesto {
+    background-color: var(--color-superficie-header);
+}
+
+[data-theme="oscuro"] main.pagina-inicio #novedades article,
+[data-theme="oscuro"] main section#presentacion .texto-hero-superpuesto p {
+    color: var(--color-texto-header);
+}
+
+[data-theme="oscuro"] .boton-antarion {
+    color: #2D2B2A;
+}
+
+[data-theme="oscuro"] .boton-antarion:hover {
+    background-color: var(--color-superficie-header);
+    color: var(--color-texto-header);
 }
