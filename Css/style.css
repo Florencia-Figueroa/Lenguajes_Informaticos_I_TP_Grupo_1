@@ -832,7 +832,7 @@ main.pagina-inicio section#presentacion .texto-hero-superpuesto p {
 .boton-antarion {
     background-color: var(--color-principal);
     border-color: var(--color-principal);
-    color: var(--color-texto-principal);
+    color: black;
     font-weight: 700;
     padding: 0.5rem 1.2rem;
     transition: all 0.3s ease;
@@ -966,7 +966,7 @@ main section#caracteristicas .etiqueta-flotante {
 [data-theme="oscuro"] {
     --color-fondo: #1D1B1A;
     --color-principal: #F2A94A;
-    --color-secundario: #D88976;
+    --color-secundario: #1b1817;
     --color-detalle: #A3928A;
     --color-texto-principal: #EEE6DF;
     --color-superficie-header: #302522;
@@ -987,7 +987,7 @@ main section#caracteristicas .etiqueta-flotante {
 }
 
 [data-theme="oscuro"] .boton-antarion {
-    color: #2D2B2A;
+    color: green;
 }
 
 [data-theme="oscuro"] .boton-antarion:hover {
