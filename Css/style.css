@@ -758,6 +758,10 @@ footer div a i {
     font-size: 1.2rem;
 }
 
+footer div a img {
+    filter: brightness(0) saturate(100%) invert(71%) sepia(65%) saturate(535%) hue-rotate(347deg) brightness(101%) contrast(90%);
+}
+
 a {
     transition: all 0.3s ease;
 }
@@ -883,8 +887,9 @@ main section#caracteristicas .etiqueta-flotante {
     display: inline-flex;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     cursor: pointer;
+    margin-top: 1rem;
 }
 
 .theme-switch__input {
@@ -966,7 +971,7 @@ main section#caracteristicas .etiqueta-flotante {
 [data-theme="oscuro"] {
     --color-fondo: #1D1B1A;
     --color-principal: #F2A94A;
-    --color-secundario: #1b1817;
+    --color-secundario: #694a10;
     --color-detalle: #A3928A;
     --color-texto-principal: #EEE6DF;
     --color-superficie-header: #302522;
@@ -994,3 +999,39 @@ main section#caracteristicas .etiqueta-flotante {
     background-color: var(--color-superficie-header);
     color: var(--color-texto-header);
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+.volver-arriba {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 1030;
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border: 2px solid var(--color-principal);
+    border-radius: 50%;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.volver-arriba:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-superficie-header);
+    color: var(--color-principal);
+}
+
+.volver-arriba:focus-visible {
+    outline: 3px solid var(--color-principal);
+    outline-offset: 3px;
+}
+
