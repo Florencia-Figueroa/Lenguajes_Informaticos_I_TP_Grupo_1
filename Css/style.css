@@ -726,17 +726,18 @@ img {
 footer {
     background-color: var(--color-superficie-header);
     color: var(--color-texto-header);
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     text-align: center;
     border-top: 5px solid var(--color-principal);
-    margin-top: 3rem; 
+    margin-top: 3rem;
     font-size: 0.85rem;
+    line-height: 1.4;
     box-sizing: border-box;
     width: 100%;
 }
 
 footer p {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.1rem;
 }
 
 
@@ -745,7 +746,7 @@ footer div {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin: 0.4rem 0;
+    margin: 0.2rem 0;
     width: 100%;
     height: auto; 
 }
